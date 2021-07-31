@@ -53,17 +53,17 @@ func tree_to_arr(root *TreeNode) []int {
 	for has_next_level {
 		has_next_level = false
 		next_arr = []*TreeNode{}
-		for _, node_p := range cur_arr {
+		for _, node := range cur_arr {
 			var val int
 			var left, right *TreeNode
-			if node_p == nil {
+			if node == nil {
 				val = -1
 				left = nil
 				right = nil
 			} else {
-				val = (*node_p).Val
-				left = (*node_p).Left
-				right = (*node_p).Right
+				val = node.Val
+				left = node.Left
+				right = node.Right
 			}
 			res = append(res, val)
 			if left != nil || right != nil {

@@ -47,10 +47,10 @@ func tree_dfs(node *TreeNode, row int, col int) {
 		m[col] = make(map[int][]int)
 	}
 	if m[col][row] == nil {
-		m[col][row] = []int{(*node).Val}
+		m[col][row] = []int{node.Val}
 	} else {
 		// insert new value to right position, A->Z
-		m[col][row] = insertOrderly(m[col][row], (*node).Val)
+		m[col][row] = insertOrderly(m[col][row], node.Val)
 	}
 
 	tree_dfs(node.Left, row+1, col-1)
