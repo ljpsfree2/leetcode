@@ -1,7 +1,5 @@
 package tasks
 
-import "fmt"
-
 var result int
 var nums []int
 
@@ -18,6 +16,5 @@ func dfs(val int, idx int) {
 func SubsetXORSum(arr []int) int {
 	nums = arr
 	dfs(0, 0)
-	fmt.Println(result)
 	return result
 }

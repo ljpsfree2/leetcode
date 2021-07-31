@@ -1,7 +1,6 @@
 package tasks
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -16,12 +15,10 @@ func reverse(x int) int {
 
 	x = int(math.Abs(float64(x)))
 
-	fmt.Println(x)
 	for x > 0 {
 		num = x % 10
 		rev = rev*10 + num
 		x = x / 10
-		fmt.Println(num, rev, x)
 	}
 
 	rev = rev * flag
