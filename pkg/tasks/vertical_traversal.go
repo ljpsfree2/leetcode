@@ -1,7 +1,5 @@
 package tasks
 
-import "fmt"
-
 /**
  * Definition for a binary tree node.
  */
@@ -66,14 +64,14 @@ func verticalTraversal(root *TreeNode) [][]int {
 	// 2. move row data to array by sorted col index.
 	var cols []map[int][]int // the array to store row data
 	var col_indexes []int
-	fmt.Println(m)
+	// fmt.Println(m)
 
 	// prepare sorted col indexes
 	for col_idx := range m {
 		// find correct position in cols
 		col_indexes = insertOrderly(col_indexes, col_idx)
 	}
-	fmt.Println(col_indexes)
+	// fmt.Println(col_indexes)
 
 	// move row data to array by sorted col index
 	for i := 0; i < len(col_indexes); i++ {
@@ -82,7 +80,7 @@ func verticalTraversal(root *TreeNode) [][]int {
 
 	var result = make([][]int, len(cols))
 	var row_map map[int][]int
-	fmt.Println(cols)
+	// fmt.Println(cols)
 	// merge rows
 	for i := 0; i < len(cols); i++ {
 		/*
@@ -93,7 +91,7 @@ func verticalTraversal(root *TreeNode) [][]int {
 		row_map = cols[i]
 		var row_arr []int
 		var row_indexes []int
-		fmt.Println(row_map)
+		// fmt.Println(row_map)
 
 		// prepare sorted row indexes
 		for row_idx := range row_map {
