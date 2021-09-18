@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestCircularArrayLoop(t *testing.T) {
+func TestSuperUglyNumber(t *testing.T) {
 	var tests = []struct {
 		n      int
 		primes []int
